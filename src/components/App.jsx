@@ -1,6 +1,8 @@
 import user from '../user.json'
 import { Profile } from "./profile/profile";
+import statistic from '../data.json'
 import{GlobalStyle} from './globalstyles'
+import { Statistics } from './Statistics/Statistics';
 export const App = () => {
   return (
   
@@ -14,9 +16,11 @@ export const App = () => {
         color: '#010101'
       }}
     >
-        <GlobalStyle />
+      
 <Profile userData = {user}
 />
+<GlobalStyle />
+<Statistics statisticData = {statistic}/>
 
     </div>
   );
