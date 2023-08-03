@@ -1,7 +1,9 @@
 import user from '../user.json'
 import { Profile } from "./profile/profile";
+import{GlobalStyle} from './globalstyles'
 export const App = () => {
   return (
+  
     <div
       style={{
         height: '100vh',
@@ -12,14 +14,10 @@ export const App = () => {
         color: '#010101'
       }}
     >
-<Profile
-  username={user.username}
-  tag={user.tag}
-  location={user.location}
-  avatar={user.avatar}
-  stats={user.stats}
+        <GlobalStyle />
+<Profile userData = {user}
 />
-      React homework template
+
     </div>
   );
 };
