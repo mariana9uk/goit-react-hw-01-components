@@ -1,4 +1,4 @@
-import { List } from "./Statistics.styled"
+import { List, ListItem } from "./Statistics.styled"
 
 export const Statistics = ({statisticData})=>{
     return(
@@ -6,10 +6,10 @@ export const Statistics = ({statisticData})=>{
   <h2 className="title">Upload stats</h2>
 
   <List>
-    {statisticData.map(statItem=>(<li key={statItem.id} className="item">
-      <span className="label">{statItem.label}</span>
-      <span className="percentage">{statItem.percentage}</span>
-    </li>))}
+    {statisticData.map(statItem=>(<ListItem key={statItem.id}>
+      <span >{statItem.label}</span>
+      <span >{statItem.percentage}</span>
+    </ListItem>))}
       </List>
 </section>
 

@@ -3,6 +3,7 @@ import { Profile } from "./profile/profile";
 import statistic from '../data.json'
 import{GlobalStyle} from './globalstyles'
 import { Statistics } from './Statistics/Statistics';
+import friends from '../friends.json'
 export const App = () => {
   return (
   
@@ -10,10 +11,12 @@ export const App = () => {
       style={{
         height: '100vh',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
+        padding: 30
       }}
     >
       
