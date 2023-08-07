@@ -25,6 +25,7 @@ export const App = () => {
 <GlobalStyle />
 <Statistics statisticData = {statistic}/>
 
+
     </div>
   );
 };

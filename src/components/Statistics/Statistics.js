@@ -1,12 +1,12 @@
-import { List, ListItem } from "./Statistics.styled"
+import { List, ListItem, Headerstatistics } from "./Statistics.styled"
 
 export const Statistics = ({statisticData})=>{
     return(
 <section className="statistics">
-  <h2 className="title">Upload stats</h2>
+  <Headerstatistics className="title">Upload stats</Headerstatistics>
 
   <List>
-    {statisticData.map(statItem=>(<ListItem key={statItem.id}>
+    {statisticData.map(statItem=>(<ListItem key={statItem.id} >
       <span >{statItem.label}</span>
       <span >{statItem.percentage}</span>
     </ListItem>))}
