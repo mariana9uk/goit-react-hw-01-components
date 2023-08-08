@@ -4,6 +4,7 @@ import statistic from '../data.json'
 import{GlobalStyle} from './globalstyles'
 import { Statistics } from './Statistics/Statistics';
 import friends from '../friends.json'
+import { FriendsList } from './FriendList/FriendList';
 export const App = () => {
   return (
   
@@ -24,7 +25,7 @@ export const App = () => {
 />
 <GlobalStyle />
 <Statistics statisticData = {statistic}/>
-
+<FriendsList items = {friends}/>
 
     </div>
   );
