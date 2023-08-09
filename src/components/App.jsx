@@ -5,12 +5,14 @@ import{GlobalStyle} from './globalstyles'
 import { Statistics } from './Statistics/Statistics';
 import friends from '../friends.json'
 import { FriendsList } from './FriendList/FriendList';
+import transactions from '../transactions.json';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 export const App = () => {
   return (
   
     <div
       style={{
-        height: '100vh',
+        
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -25,8 +27,8 @@ export const App = () => {
 />
 <GlobalStyle />
 <Statistics statisticData = {statistic}/>
-<FriendsList items = {friends}/>
-
+<FriendsList friends = {friends}/>
+<TransactionHistory  items={transactions}/>
     </div>
   );
 };

@@ -1,30 +1,18 @@
 
-import { StatusSpan, Avatar} from "./FriendList.styled";
+import {ListSt, FriendsSTList} from "./FriendList.styled";
+import { FriendsListItem } from "./FriendsListItem";
 
-const FriendsListItem = ({ avatar, name, isOnline }) => {
-    return (
-      <li >
-  <StatusSpan  style={{ backgroundColor: isOnline ? "green" : "red" }} >{isOnline}</StatusSpan>
-<Avatar src={avatar} alt="User avatar" width="48"></Avatar>
-  <p>{name}</p>
-</li>
-    )
-  };
-
-export const FriendsList = ({items }) => {
-    const friendListItems = items.map((friend) => (
-      <FriendsListItem
-      key={friend.id}
-        avatar={friend.avatar}
-        name={friend.name}
-        isOnline={friend.isOnline}
-      />
+export const FriendsList = ({friends }) => {
+    const friendListItems = friends.map((friend) => (
+      <ListSt  key={friend.id} >
+      <FriendsListItem friend={friend} />
+      </ListSt>
     ));
   
     return (
-      <ul>
+      <FriendsSTList>
         {friendListItems}
-      </ul>
+      </FriendsSTList>
     );
   };
 
