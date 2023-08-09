@@ -1,17 +1,18 @@
-import { List, ListItem, Headerstatistics } from "./Statistics.styled"
+import { List, ListItem } from './Statistics.styled';
 
-export const Statistics = ({statisticData})=>{
-    return(
-<section>
-  <Headerstatistics>Upload stats</Headerstatistics>
+export const Statistics = ({ title, stats }) => {
+  return (
+    <section>
+      {title && <h2>{title}</h2>}
 
-  <List>
-    {statisticData.map(statItem=>(<ListItem key={statItem.id} >
-      <span >{statItem.label}</span>
-      <span >{statItem.percentage}</span>
-    </ListItem>))}
+      <List>
+        {stats.map(statItem => (
+          <ListItem key={statItem.id}>
+            <span>{statItem.label}</span>
+            <span>{statItem.percentage}</span>
+          </ListItem>
+        ))}
       </List>
-</section>
-
-    )
-}
+    </section>
+  );
+};
