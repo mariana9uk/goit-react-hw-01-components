@@ -1,8 +1,8 @@
 
-import { HeadStyled, TdStyled, ThStyled, TableStyled } from "./TransactionHistory.styled"
+import { HeadStyled, TdStyled, ThStyled, TableStyled, TrStyled } from "./TransactionHistory.styled"
 export const TransactionHistory = ({items}) => {
     return (
-        <TableStyled >
+        <TableStyled style={{borderColor:"red"}}>
   <HeadStyled>
     <tr>
       <ThStyled>Type</ThStyled>
@@ -10,13 +10,13 @@ export const TransactionHistory = ({items}) => {
       <ThStyled>Currency</ThStyled>
     </tr>
   </HeadStyled>
-  <tbody>
+  <tbody >
     {items.map((item)=>(
-     <tr key={item.id}>
-      <TdStyled>{item.type}</TdStyled>
+     <TrStyled  key={item.id}>
+      <TdStyled >{item.type}</TdStyled>
       <TdStyled>{item.amount}</TdStyled>
       <TdStyled>{item.currency}</TdStyled>
-    </tr>))}
+    </TrStyled >))}
   
   </tbody>
 </TableStyled >
